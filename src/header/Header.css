@@ -1,0 +1,150 @@
+.headerSRC {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	z-index: 2;
+	background: linear-gradient(
+		180deg,
+		rgb(26, 26, 26) 0%,
+		rgb(26, 26, 26) 90%,
+		#f0f0f0 100%
+	);
+	color: white;
+	justify-content: space-around;
+	animation: headerBaar 2s ease 0s 1 normal forwards;
+	will-change: transform;
+	padding: 0 10px;
+	gap: 15px;
+}
+@keyframes headerBaar {
+	0% {
+		transform: scaleY(0.4);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
+.btnHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.btnStyleRegestration {
+	padding: 8px 8px;
+	font-size: clamp(14px, 2vw, 38px);
+	border-radius: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0px -2px 8px 0px #f0f0f0;
+	border: 1px solid rgb(0, 0, 0);
+	margin-top: 10px;
+}
+
+.btnStyleRegestration:hover {
+	background-color: rgba(161, 161, 161, 0.9);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: rgb(61, 40, 12);
+	transform: scale(1.3);
+}
+.btnStyleRegestration:active {
+	transform: scale(0.9);
+	box-shadow: 0px 2px 8px 0px #ffffff;
+}
+.loginFkexName {
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
+}
+.btnText {
+	margin: 0 0 10px 0;
+}
+.btnText:hover {
+	margin: 0 0 10px 0;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	transform: scale(1.1);
+}
+.btnText:active {
+	margin: 0 0 10px 0;
+	transform: scale(0.8);
+}
+.exitBtnMenu {
+	display: flex;
+	gap: 3px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5px;
+	font-size: clamp(6px, 2vw, 20px);
+}
+.h1Name {
+	font-size: clamp(16px, 2vw, 40px);
+	text-shadow: -14px 20px 4px silver, 37px -20px 9px silver;
+	color: #f0f0f0;
+	perspective: 800px;
+	-webkit-perspective: 800px;
+	animation: headerName 8s ease 0s 1 normal forwards;
+}
+@keyframes headerName {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		transform: scale(0.5);
+	}
+
+	100% {
+		box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+		transform: scale(1);
+	}
+}
+.letter {
+	font-size: clamp(14px, 2vw, 52px);
+	display: inline-block;
+	position: relative;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transition: transform var(--animation-duration) ease-out;
+	cursor: pointer; /* Чтобы пользователь знал, что с буквами можно взаимодействовать */
+}
+
+/* Псевдоэлементы для создания теней, которые будут видны при "открытии" букв */
+.letter::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	transform: rotateY(0deg);
+	transition: transform var(--animation-duration) ease-out;
+	content: "";
+	display: block;
+	backface-visibility: hidden;
+}
+
+/* При наведении мы создаём эффект "закрытия дверей" */
+.letter:hover {
+	transform: rotateY(180deg);
+}
+
+/* При наведении псевдоэлемент показывает тень с обратной стороны буквы */
+.letter:hover::before {
+	transform: rotateY(-180deg);
+}
+
+/* Стили для анимации и визуального оформления */
+:root {
+	--animation-duration: 0.4s;
+	--letter-spacing: 0.3em;
+}
+@media (max-width: 400px) {
+	.loginFkexName {
+		gap: 20px;
+	}
+}

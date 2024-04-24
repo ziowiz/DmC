@@ -1,0 +1,29 @@
+.footer {
+	background: linear-gradient(
+		360deg,
+		rgb(26, 26, 26) 0%,
+		rgb(16 16 16) 75%,
+		#f0f0f0 100%
+	);
+	color: antiquewhite;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 25px;
+}
+
+.footer a {
+	text-decoration: none;
+	color: #007bff;
+	font-size: 10px;
+}
+
+.footer p {
+	margin-top: 5px;
+	font-size: 10px;
+}
+
+.footer p.italic {
+	font-style: italic;
+	font-size: 10px;
+}

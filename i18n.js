@@ -1,0 +1,188 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+// Добавьте переводы для русского и украинского языков
+const resources = {
+	ru: {
+		translation: {
+			H1site:
+				"Данный ресурс предназначен для анонимного письма в стол. Тоесть ваша печаль, ненависть, либо обида останется анонимной. Другие пользователи могут просматривать ваши сообщения. На сайте отсутсвует цензура. Но администраторы могут удалять ваши сообщения если они призывают к насилию над другими людьми. Отношения, политика, предательство, война, и любые другие темы разрешены. Нецензурная брань разрешена в разумных пределах. ",
+			PlaceHolderName: "ваш псевдоним",
+			NameSites: "Я уже не могу...",
+			LeftSymbols: "Осталось символов",
+			ReCapcha: "Подтвердите капчу",
+			CapchaDone: "Подтверждено",
+			yourLogin: "Ваш логин",
+			send: "Опубликовать",
+			yourPassword: "Ваш пароль",
+			loginSuccess: "Успешный вход!",
+			login: "Войти",
+			expressYourself: "Выскажись. Не держи в себе",
+			logout: "Выйти",
+			register: "Зарегистрироваться",
+			noDate: "Без даты",
+			noName: "Сервер не отдал имя",
+			noResponse: "Ответ с сервера не получен",
+			delete: "Удалить",
+			loading: "Рукописи не горят... идет загрузка",
+			prev: "Назад",
+			next: "Вперед",
+			createLogin: "придумайте login",
+			loginEmpty: "Логин не может быть пустым",
+			loginLength: "Минимум 3 символа максимум 8",
+			loginOccupied: "Логин уже занят",
+			createPassword: "придумайте password",
+			passwordEmpty: "Пароль не может быть пустым",
+			passwordLength: "Минимум 3 символа максимум 18",
+			repeatPassword: "Повторите password",
+			passwordMismatch: "Пароли не совпадают",
+			register: "Зарегистрироваться",
+			allResirved: "Все права защищены.",
+			thisSytes:
+				"Этот сайт не собирает личные данные пользователей и не отслеживает IP-адреса. Все взаимодействия на сайте являются анонимными. Сайт работает на чистом энтузиазме автора и предназначен для свободного использования.",
+			tnx: "Благодарим за вашу поддержку и интерес!",
+			newPost: "Добавить новый пост",
+		},
+	},
+	ua: {
+		translation: {
+			H1site:
+				"Цей ресурс призначений для анонімних листів у стіл. Тобто ваш сум, ненависть або образа залишаться анонімними. Інші користувачі можуть переглядати ваші повідомлення. На сайті відсутня цензура. Але адміністратори можуть видаляти ваші повідомлення, якщо вони закликають до насильства над іншими людьми. Відносини, політика, зрада, війна і будь-які інші теми дозволені. Нецензурна лайка дозволена у розумних межах.",
+			PlaceHolderName: "Ваш псевдонім",
+			NameSites: "Я вже не можу...",
+			LeftSymbols: "Залишилось символів",
+			ReCapcha: "Підтвердіть капчу",
+			CapchaDone: "Підтверджено",
+			yourLogin: "Ваш логін",
+			send: "Опублікувати",
+			yourPassword: "Ваш пароль",
+			loginSuccess: "Успішний вхід!",
+			login: "Увійти",
+			expressYourself: "Висловись. Не тримай в собі",
+			logout: "Вийти",
+			register: "Зареєструватися",
+			noDate: "Без дати",
+			noName: "Сервер не повернув ім'я",
+			noResponse: "Відповідь від сервера не отримано",
+			delete: "Видалити",
+			loading: "Рукописи не горять... йде завантаження",
+			prev: "Назад",
+			next: "Вперед",
+			createLogin: "Придумайте логін",
+			loginEmpty: "Логін не може бути порожнім",
+			loginLength: "Мінімум 3 символи максимум 8",
+			loginOccupied: "Логін уже зайнятий",
+			createPassword: "Придумайте пароль",
+			passwordEmpty: "Пароль не може бути порожнім",
+			passwordLength: "Мінімум 3 символи максимум 18",
+			repeatPassword: "повторіть пароль",
+			passwordMismatch: "Паролі не співпадають",
+			register: "Зареєструватися",
+			allResirved: "Всі права захищені.",
+			thisSytes:
+				"Цей сайт не збирає особисті дані користувачів та не відстежує IP-адреси. Всі взаємодії на сайті є анонімними. Сайт працює на чистому ентузіазмі автора і призначений для вільного використання.",
+			tnx: "Дякуємо за вашу підтримку та інтерес!",
+			newPost: "Добавити новий пост",
+		},
+	},
+	en: {
+		translation: {
+			H1site:
+				"This resource is intended for anonymous letters to the desk. That is, your sadness, hate, or resentment will remain anonymous. Other users can view your messages. There is no censorship on the site. However, administrators can delete your messages if they incite violence against other people. Relationships, politics, betrayal, war, and any other topics are allowed. Profanity is permitted within reasonable limits.",
+			PlaceHolderName: "Your nickname",
+			NameSites: "I can't take it anymore...",
+			LeftSymbols: "Characters left",
+			ReCapcha: "Verify the captcha",
+			CapchaDone: "Verified",
+			yourLogin: "Your login",
+			send: "Post",
+			yourPassword: "Your password",
+			loginSuccess: "Login successful!",
+			login: "Login",
+			expressYourself: "Speak up. Don't hold it in",
+			logout: "Logout",
+			register: "Register",
+			noDate: "No date",
+			noName: "Server didn't return a name",
+			noResponse: "No response from server",
+			delete: "Delete",
+			loading: "Manuscripts don’t burn... loading",
+			prev: "Previous",
+			next: "Next",
+			createLogin: "Create a login",
+			loginEmpty: "Login cannot be empty",
+			loginLength: "Minimum 3 characters, maximum 8",
+			loginOccupied: "Login is already taken",
+			createPassword: "Create a password",
+			passwordEmpty: "Password cannot be empty",
+			passwordLength: "Minimum 3 characters, maximum 18",
+			repeatPassword: "Repeat password",
+			passwordMismatch: "Passwords do not match",
+			register: "Register",
+			allResirved: "All rights reserved.",
+			thisSytes:
+				"This site does not collect personal data from users nor does it track IP addresses. All interactions on the site are anonymous. The site operates purely on the author's enthusiasm and is intended for free use.",
+			tnx: "Thank you for your support and interest!",
+			newPost: "New post",
+		},
+	},
+	sk: {
+		translation: {
+			H1site:
+				"Tento zdroj je určený na anonymné listy na stôl. To znamená, že váš smútok, nenávisť alebo urážka zostanú anonymné. Iní používatelia môžu prezerávať vaše správy. Na stránke neexistuje cenzúra. Administrátori však môžu vaše správy odstrániť, ak vyzývajú k násiliu na iných ľuďoch. Vzťahy, politika, zrada, vojna a akékoľvek iné témy sú povolené. Vulgárne nadávky sú povolené v rozumných medziach.",
+			PlaceHolderName: "Vaša meno",
+			NameSites: "Už to nezvládam...",
+			LeftSymbols: "Zostáva znakov",
+			ReCapcha: "Overte captcha",
+			CapchaDone: "Overené",
+			yourLogin: "Vaše prihlásenie",
+			send: "Odoslať",
+			yourPassword: "Vaše heslo",
+			loginSuccess: "Prihlásenie úspešné!",
+			login: "Prihlásiť sa",
+			expressYourself: "Vyjadrite sa. Nedržte to v sebe",
+			logout: "Odhlásiť sa",
+			register: "Registrovať sa",
+			noDate: "Bez dátumu",
+			noName: "Server nevrátil meno",
+			noResponse: "Žiadna odpoveď od servera",
+			delete: "Zmazať",
+			loading: "Rukopisy nehoria... načítava sa",
+			prev: "Späť",
+			next: "Ďalej",
+			createLogin: "Vytvorte meno",
+			loginEmpty: "Prihlásenie nemôže byť prázdne",
+			loginLength: "Minimálne 3 znaky, maximálne 8",
+			loginOccupied: "Prihlásenie je už obsadené",
+			createPassword: "vytvorte heslo",
+			passwordEmpty: "Heslo nemôže byť prázdne",
+			passwordLength: "Minimálne 3 znaky, maximálne 18",
+			repeatPassword: "Opakujte heslo",
+			passwordMismatch: "Heslá sa nezhodujú",
+			register: "Registrovať",
+			allResirved: "Všetky práva vyhradené.",
+			thisSytes:
+				"Táto stránka nezbiera osobné údaje od používateľov ani nesleduje IP adresy. Všetky interakcie na stránke sú anonymné. Stránka funguje čisto na nadšení autora a je určená na voľné použitie.",
+			tnx: "Ďakujeme za vašu podporu a záujem!",
+			newPost: "Nový položka",
+		},
+	},
+};
+
+i18n
+	.use(LanguageDetector) // Определяет язык пользователя
+	.use(initReactI18next) // Передаёт i18n в React-компоненты
+	.init({
+		resources,
+		fallbackLng: "ru", // Укажите русский как язык по умолчанию, если не обнаружен другой
+		detection: {
+			order: ["navigator"],
+			caches: [], // временно отключаем кэш
+		},
+		interpolation: {
+			escapeValue: false, // Не экранирует передаваемые значения
+		},
+	});
+
+export default i18n;

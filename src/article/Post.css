@@ -1,0 +1,109 @@
+.post {
+	background-color: #f0f0f0;
+	padding: 5px 40px 20px 40px;
+	gap: 5px;
+	display: flex;
+	flex-direction: column;
+	animation: postAnimationPapper 2s ease 0s 1 normal forwards;
+	will-change: transform;
+}
+.postBG {
+	background-image: url(".././assets/PAPER_TEXTURE.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: -3px -6px 8px 0px #000000;
+	border: 1px solid rgb(0, 0, 0);
+	margin: 25px auto;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: clamp(16px, 2vw, 33px);
+	padding: 30px;
+}
+.postBG-1,
+.postBG-2,
+.postBG-3 {
+	border: 1px solid rgb(0, 0, 0);
+	margin: 25px auto;
+	background-image: url(".././assets/PAPER_TEXTURE.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: -2px -1px 8px 0px #000000;
+}
+.textPost {
+	animation: postAnimation 4s ease 0s 1 normal forwards;
+	will-change: transform;
+	text-shadow: 0 0 1px transparent;
+}
+@keyframes postAnimation {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+	30% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes postAnimationPapper {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.postBG-1 {
+	width: 99%;
+	transform: rotate(358deg);
+	padding: 0;
+}
+.postBG-2 {
+	width: 98%;
+	transform: rotate(4deg);
+	margin: 0;
+}
+.postBG-3 {
+	transform: rotate(358deg);
+	margin: 10px;
+	padding: 5px 20px 10px 20px;
+}
+.nameUser {
+	font-style: italic;
+	font-size: clamp(10px, 2vw, 16px);
+	margin: 4px 11px -15px 2px;
+}
+.postDate {
+	font-size: clamp(8px, 1vw, 13px);
+	margin: 10px 20px 2px auto;
+	float: right;
+}
+.btnDeletePost {
+	border-radius: 4px;
+	height: auto;
+	width: auto;
+	border: 1px solid rgb(0, 0, 0);
+	display: block;
+	background-color: rgb(235, 217, 195);
+	color: rgb(0, 0, 0);
+	font-size: clamp(8px, 1vw, 13px);
+	margin: -24px 3px 3px auto;
+}
+.btnDeletePost:hover {
+	background-color: rgb(255, 0, 0);
+	color: rgb(0, 0, 0);
+}
+.btnDeletePost:active {
+	background-color: rgb(32, 28, 3);
+	color: rgb(255, 255, 255);
+}
